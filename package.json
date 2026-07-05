@@ -1,0 +1,25 @@
+{
+  "name": "fullstack-javascript-project-46",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/phoenix-85/fullstack-javascript-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/phoenix-85/fullstack-javascript-project-46/actions)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phoenix-85/fullstack-javascript-project-46.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phoenix-85/fullstack-javascript-project-46/issues"
+  },
+  "homepage": "https://github.com/phoenix-85/fullstack-javascript-project-46#readme",
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.4.0",
+    "globals": "^17.6.0"
+  }
+}
