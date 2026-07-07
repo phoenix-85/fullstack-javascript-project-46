@@ -6,7 +6,8 @@ export default (fullPath1, fullPath2, format) => {
   const obj1 = parser(fullPath1);
   const obj2 = parser(fullPath2);
   const diff = makeDiff(obj1, obj2);
-  console.log(formatter(diff, format));
+
+  return formatter(diff, format);
 }
 
 const isObject = (value) => _.isPlainObject(value);
