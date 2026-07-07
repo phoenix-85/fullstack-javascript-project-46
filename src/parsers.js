@@ -5,7 +5,7 @@ import path from 'node:path';
 export default (fullPath) => {
   const extname = path.extname(fullPath);
   const data = readFileSync(fullPath, 'utf-8');
-  switch(extname) {
+  switch (extname) {
     case '.yml':
     case '.yaml':
       return load(data);
