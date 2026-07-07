@@ -1,13 +1,12 @@
 import _ from 'lodash';
 import parser from './parsers.js'
-import formatter from './formatters.js'
+import formatter from './formatters/index.js'
 
 export default (fullPath1, fullPath2, format) => {
   const obj1 = parser(fullPath1);
   const obj2 = parser(fullPath2);
   const diff = makeDiff(obj1, obj2);
   console.log(formatter(diff, format));
-  // console.log(diff);
 }
 
 const isObject = (value) => _.isPlainObject(value);
