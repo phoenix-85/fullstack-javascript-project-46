@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "[![Actions Status](https://github.com/phoenix-85/fullstack-javascript-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/phoenix-85/fullstack-javascript-project-46/actions)",
-  "main": "index.js",
+  "main": "bin/gendiff",
   "bin": {
     "gendiff": "bin/gendiff"
   },

@@ -1,11 +1,24 @@
 #!/usr/bin/env node
 import { program } from 'commander';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
+import process from 'node:process';
+import parser from "../src/parser.js";
 
 program
   .description('Compares two configuration files and shows a difference.')
-  .version('1.0.0','-V, --version', 'output the version number')
-  .option('-f, --format [type]', ' output format')
+  .version('1.0.0', '-V, --version', 'output the version number')
+  .option('-f, --format [type]', 'output format')
   .helpOption('-h, --help', 'display help for command')
   .arguments('<filepath1> <filepath2>')
+  .action((filepath1, filepath2) => {
+    const fullPath1 = path.resolve(process.cwd(), filepath1);
+    const fullPath2 = path.resolve(process.cwd(), filepath2);
+
+    const json1 = readFileSync(fullPath1, 'utf-8');
+    const json2 = readFileSync(fullPath2, 'utf-8');
+
+    parser(json1, json2);
+  });
 
 program.parse();
